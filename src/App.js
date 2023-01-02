@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
+import Main from './components/Main';
 import './styles/App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="page-wrap">
-        <header className="page-header">
-          <h1>CV Builder</h1>
+        <header className='page-header'>
+          <h1>CV BUILDER</h1>
         </header>
-        <main className="page-main">
-          <p>Main....</p>
-        </main>
+        <Main/>
         <footer className="page-footer">
           <small>Ray Allen Datuin 2023</small>
         </footer>
