@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import GeneralInfoInput from './GeneralInfoInput';
 import EduInputForm from './EduInputForm';
+import PracInputForm from './PracInputForm';
 
 class DataInputForm extends Component {
     render() {
@@ -8,6 +9,7 @@ class DataInputForm extends Component {
             <div>
                 <GeneralInfoInput/>
                 <EduInputForm/>
+                <PracInputForm/>
             </div>
         );
     }
