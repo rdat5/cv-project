@@ -4,7 +4,7 @@ import GeneralInfoInput from './GeneralInfoInput';
 class DataInputForm extends Component {
     render() {
         return (
-            <p>DATA INPUT FORM</p>
+            <GeneralInfoInput/>
         );
     }
 }
