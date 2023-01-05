@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import GeneralInfoInput from './GeneralInfoInput';
+import EduInputForm from './EduInputForm';
 
 class DataInputForm extends Component {
     render() {
         return (
-            <GeneralInfoInput/>
+            <div>
+                <GeneralInfoInput/>
+                <EduInputForm/>
+            </div>
         );
     }
 }
