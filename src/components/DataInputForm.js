@@ -6,7 +6,7 @@ import PracInputForm from './PracInputForm';
 class DataInputForm extends Component {
     render() {
         return (
-            <div>
+            <div className='data-input-form'>
                 <GeneralInfoInput/>
                 <EduInputForm/>
                 <PracInputForm/>
