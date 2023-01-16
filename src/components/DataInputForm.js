@@ -28,8 +28,8 @@ class DataInputForm extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        let state = this.state;
-        console.log(`${state.nameInput}, ${state.emailInput}, ${state.phoneInput}`)
+        const state = this.state;
+        this.props.submitFn(state.nameInput, state.emailInput, state.phoneInput);
     }
 
     render() {
