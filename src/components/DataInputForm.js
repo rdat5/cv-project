@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import EduInputEntry from './EduInputEntry';
 
 class DataInputForm extends Component {
     constructor(props) {
@@ -14,6 +15,12 @@ class DataInputForm extends Component {
 
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.addEduEntry = this.addEduEntry.bind(this);
+    }
+
+    addEduEntry(e) {
+        e.preventDefault();
+        console.log('add education');
     }
 
     handleInputChange(e) {
@@ -66,7 +73,8 @@ class DataInputForm extends Component {
                     </fieldset>
                     <fieldset>
                         <legend>Educational Experience</legend>
-                        <button>+ Add Entry</button>
+                        <EduInputEntry/>
+                        <button onClick={this.addEduEntry}>+ Add Entry</button>
                     </fieldset>
                     <fieldset>
                         <legend>Practical Experience</legend>
