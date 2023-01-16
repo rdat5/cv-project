@@ -31,7 +31,7 @@ class Main extends Component {
         return (
             <main className='page-main'>
                 <DataInputForm submitFn={this.inputSubmit}/>
-                <CVResult/>
+                <CVResult userData={this.state}/>
             </main>
         );
     }
