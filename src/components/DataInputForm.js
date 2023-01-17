@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import EduInputEntry from './EduInputEntry';
 
 class DataInputForm extends Component {
     constructor(props) {
@@ -73,8 +72,31 @@ class DataInputForm extends Component {
                     </fieldset>
                     <fieldset>
                         <legend>Educational Experience</legend>
-                        <EduInputEntry/>
-                        <button onClick={this.addEduEntry}>+ Add Entry</button>
+                        <fieldset>
+                            <legend>Education Entry</legend>
+                            <label htmlFor="schoolNameInput">School Name:</label>
+                            <input
+                                type="text"
+                                id="schoolNameInput"
+                                name="schoolNameInput"/>
+                            <br></br>
+                            <br></br>
+                            <label htmlFor="studyInput">Study:</label>
+                            <input
+                                type="text"
+                                id="studyInput"
+                                name="studyInput"/>
+                            <br></br>
+                            <br></br>
+                            <label htmlFor="studyDateInput">Date of Study:</label>
+                            <input
+                                type="text"
+                                id="studyDateInput"
+                                name="studyDateInput"/>
+                            <br></br>
+                            <br></br>
+                            <button onClick={this.addEduEntry}>+ Add Entry</button>
+                        </fieldset>
                     </fieldset>
                     <fieldset>
                         <legend>Practical Experience</legend>
