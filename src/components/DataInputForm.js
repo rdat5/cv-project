@@ -15,11 +15,17 @@ class DataInputForm extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.addEduEntry = this.addEduEntry.bind(this);
+        this.addPracEntry = this.addPracEntry.bind(this);
     }
 
     addEduEntry(e) {
         e.preventDefault();
         console.log('add education');
+    }
+
+    addPracEntry(e) {
+        e.preventDefault();
+        console.log('add practical');
     }
 
     handleInputChange(e) {
@@ -136,7 +142,7 @@ class DataInputForm extends Component {
                                 name="workedToInput"/>
                             <br></br>
                             <br></br>
-                            <button>+ Add Entry</button>
+                            <button onClick={this.addPracEntry}>+ Add Entry</button>
                         </fieldset>
                     </fieldset>
                     <button onClick={this.handleSubmit}>Submit</button>
