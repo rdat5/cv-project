@@ -129,7 +129,6 @@ class DataInputForm extends Component {
                                 id="workedFromInput"
                                 name="workedFromInput"/>
                             <br></br>
-                            <br></br>
                             <label htmlFor="workedToInput">Worked to:</label>
                             <input
                                 type="text"
