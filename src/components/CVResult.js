@@ -7,9 +7,9 @@ class CVResult extends Component {
         return (
             <div className='cv-result'>
                 <p>CV Result...</p>
-                <p>Name: {userData.userName}</p>
-                <p>Email: {userData.userEmail}</p>
-                <p>Phone: {userData.userPhone}</p>
+                <p>Name: {userData.nameInput}</p>
+                <p>Email: {userData.emailInput}</p>
+                <p>Phone: {userData.phoneInput}</p>
             </div>
         );
     }

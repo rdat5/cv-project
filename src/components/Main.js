@@ -7,30 +7,30 @@ class Main extends Component {
         super(props);
 
         this.state = {
-            userName: '',
-            userEmail: '',
-            userPhone: '',
+            nameInput: '',
+            emailInput: '',
+            phoneInput: '',
             userEdu: [],
             userPrac: []
         };
 
-        this.inputSubmit = this.inputSubmit.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
     }
 
-    inputSubmit(iName, iEmail, iPhone, iEdu, iPrac){
+    handleInputChange(e) {
+        const target = e.target;
+        const value = target.value;
+        const name = target.name;
+
         this.setState({
-            userName: iName,
-            userEmail: iEmail,
-            userPhone: iPhone,
-            userEdu: iEdu,
-            userPrac: iPrac
+            [name]: value
         });
     }
 
     render() {
         return (
             <main className='page-main'>
-                <DataInputForm submitFn={this.inputSubmit}/>
+                <DataInputForm userData={this.state} inputHandler={this.handleInputChange}/>
                 <CVResult userData={this.state}/>
             </main>
         );
