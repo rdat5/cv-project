@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DataInputForm from './DataInputForm';
 import CVResult from './CVResult';
+import uniqid from 'uniqid';
 
 class Main extends Component {
     constructor(props) {
@@ -10,7 +11,20 @@ class Main extends Component {
             nameInput: '',
             emailInput: '',
             phoneInput: '',
-            userEdu: [],
+            userEdu: [
+                {
+                    id: uniqid(),
+                    schoolNameInput: 'test name',
+                    studyInput: 'test study',
+                    studyDateInput: 'test date'
+                },
+                {
+                    id: uniqid(),
+                    schoolNameInput: 'test name 2',
+                    studyInput: 'test study 2',
+                    studyDateInput: 'test date 2'
+                }
+            ],
             userPrac: []
         };
 
