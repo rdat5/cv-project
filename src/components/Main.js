@@ -31,11 +31,7 @@ class Main extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
     }
 
-    handleInputChange(e) {
-        const target = e.target;
-        const value = target.value;
-        const name = target.name;
-
+    handleInputChange(name, value) {
         this.setState({
             [name]: value
         });

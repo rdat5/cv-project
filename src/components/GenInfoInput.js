@@ -8,7 +8,11 @@ class GenInfoInput extends Component {
     }
 
     handleInputChange(e) {
-        this.props.inputHandler(e);
+        const target = e.target;
+        const value = target.value;
+        const name = target.name;
+
+        this.props.inputHandler(name, value);
     }
 
     render() {
