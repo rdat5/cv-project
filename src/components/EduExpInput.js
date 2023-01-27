@@ -2,6 +2,17 @@ import React, { Component } from 'react';
 import EduEntry from './EduEntry';
 
 class EduExpInput extends Component {
+    constructor(props) {
+        super(props);
+
+        this.onAddEntry = this.onAddEntry.bind(this);
+    }
+
+    onAddEntry(e) {
+        e.preventDefault();
+        this.props.eduEntryFn();
+    }
+
     render() {
         const ud = this.props.userData;
 
@@ -13,7 +24,7 @@ class EduExpInput extends Component {
                 <ul>
                     {entryList}
                 </ul>
-                <button>+ Add Entry</button>
+                <button onClick={this.onAddEntry}>+ Add Entry</button>
             </fieldset>
         );
     }

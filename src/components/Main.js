@@ -11,24 +11,24 @@ class Main extends Component {
             nameInput: '',
             emailInput: '',
             phoneInput: '',
-            userEdu: [
-                {
-                    id: uniqid(),
-                    schoolNameInput: 'test name',
-                    studyInput: 'test study',
-                    studyDateInput: 'test date'
-                },
-                {
-                    id: uniqid(),
-                    schoolNameInput: 'test name 2',
-                    studyInput: 'test study 2',
-                    studyDateInput: 'test date 2'
-                }
-            ],
+            userEdu: [],
             userPrac: []
         };
 
+        this.addEduEntry = this.addEduEntry.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
+    }
+
+    addEduEntry() {
+        let newEntry = {
+            id: uniqid(),
+            schoolNameInput: '',
+            studyInput: '',
+            studyDateInput: ''
+        };
+
+        let newList = this.state.userEdu.concat(newEntry);
+        this.setState({userEdu: newList});
     }
 
     handleInputChange(name, value) {
@@ -40,7 +40,7 @@ class Main extends Component {
     render() {
         return (
             <main className='page-main'>
-                <DataInputForm userData={this.state} inputHandler={this.handleInputChange}/>
+                <DataInputForm userData={this.state} inputHandler={this.handleInputChange} eduEntryFn={this.addEduEntry}/>
                 <CVResult userData={this.state}/>
             </main>
         );
