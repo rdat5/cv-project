@@ -3,10 +3,16 @@ import EduEntry from './EduEntry';
 
 class EduExpInput extends Component {
     render() {
+        const ud = this.props.userData;
+
+        let entryList = ud.userEdu.map((entry) => <li key={entry.id}><EduEntry/></li>)
+
         return(
             <fieldset>
                 <legend>Educational Experience</legend>
-                <EduEntry/>
+                <ul>
+                    {entryList}
+                </ul>
                 <button>+ Add Entry</button>
             </fieldset>
         );
