@@ -7,7 +7,22 @@ class EduExpInput extends Component {
         super(props);
 
         this.addEduEntry = this.addEduEntry.bind(this);
+        this.removeEduEntry = this.removeEduEntry.bind(this);
         this.entryInputChange = this.entryInputChange.bind(this);
+    }
+
+    removeEduEntry(id) {
+        const ude = this.props.userData.userEdu;
+        let newEduList = [];
+
+        // Build new list
+        ude.forEach(element => {
+            if (element.id !== id) {
+                newEduList.push(element);
+            }
+        });
+
+        this.props.inputHandler('userEdu', newEduList);
     }
 
     addEduEntry(e) {
@@ -44,7 +59,7 @@ class EduExpInput extends Component {
     render() {
         const ud = this.props.userData;
 
-        let entryList = ud.userEdu.map(entry => <li key={entry.id}><EduEntry entryData={entry} eduInputFn={this.entryInputChange}/></li>)
+        let entryList = ud.userEdu.map(entry => <li key={entry.id}><EduEntry entryData={entry} eduInputFn={this.entryInputChange} removeEntryFn={this.removeEduEntry}/></li>)
 
         return(
             <fieldset>

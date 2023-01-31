@@ -11,7 +11,13 @@ class EduEntry extends Component {
             studyDateInput: this.props.entryData.studyDateInput
         };
 
+        this.removeEntry = this.removeEntry.bind(this);
         this.entryUpdate = this.entryUpdate.bind(this);
+    }
+
+    removeEntry(e) {
+        e.preventDefault();
+        this.props.removeEntryFn(this.state.id);
     }
 
     entryUpdate(e){
@@ -53,6 +59,7 @@ class EduEntry extends Component {
                     name="studyDateInput"
                     value={this.state.studyDateInput}
                     onChange={this.entryUpdate}/>
+                <button onClick={this.removeEntry}>- Remove Entry</button>
             </fieldset>
         );
     }
