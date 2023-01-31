@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
 import EduEntry from './EduEntry';
+import uniqid from 'uniqid';
 
 class EduExpInput extends Component {
     constructor(props) {
         super(props);
 
-        this.onAddEntry = this.onAddEntry.bind(this);
+        this.addEduEntry = this.addEduEntry.bind(this);
         this.entryInputChange = this.entryInputChange.bind(this);
     }
 
-    onAddEntry(e) {
+    addEduEntry(e) {
         e.preventDefault();
-        this.props.eduEntryFn();
+
+        let newEntry = {
+            id: uniqid(),
+            schoolNameInput: '',
+            studyInput: '',
+            studyDateInput: ''
+        };
+
+        let newList = this.props.userData.userEdu.concat(newEntry);
+        this.props.inputHandler('userEdu', newList);
     }
 
     entryInputChange(newEntry) {
@@ -42,7 +52,7 @@ class EduExpInput extends Component {
                 <ul>
                     {entryList}
                 </ul>
-                <button onClick={this.onAddEntry}>+ Add Entry</button>
+                <button onClick={this.addEduEntry}>+ Add Entry</button>
             </fieldset>
         );
     }

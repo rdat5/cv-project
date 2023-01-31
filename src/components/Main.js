@@ -15,20 +15,7 @@ class Main extends Component {
             userPrac: []
         };
 
-        this.addEduEntry = this.addEduEntry.bind(this);
         this.handleInputChange = this.handleInputChange.bind(this);
-    }
-
-    addEduEntry() {
-        let newEntry = {
-            id: uniqid(),
-            schoolNameInput: '',
-            studyInput: '',
-            studyDateInput: ''
-        };
-
-        let newList = this.state.userEdu.concat(newEntry);
-        this.setState({userEdu: newList});
     }
 
     handleInputChange(name, value) {
