@@ -6,7 +6,22 @@ class PracExpInput extends Component {
     constructor(props) {
         super(props);
 
+        this.removePracEntry = this.removePracEntry.bind(this);
         this.addPracEntry = this.addPracEntry.bind(this);
+    }
+
+    removePracEntry(id) {
+        const upe = this.props.userData.userPrac;
+        let newPracList = [];
+
+        // Build new list
+        upe.forEach(element => {
+            if (element.id !== id) {
+                newPracList.push(element);
+            }
+        });
+
+        this.props.inputHandler('userPrac', newPracList);
     }
 
     addPracEntry(e) {
@@ -28,7 +43,7 @@ class PracExpInput extends Component {
     render() {
         const ud = this.props.userData;
 
-        let entryList = ud.userPrac.map(entry => <li key={entry.id}><PracEntry/></li>)
+        let entryList = ud.userPrac.map(entry => <li key={entry.id}><PracEntry entryData={entry} removeEntryFn={this.removePracEntry}/></li>)
 
         return(
             <fieldset>

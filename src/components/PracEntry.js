@@ -1,6 +1,26 @@
 import React, { Component } from 'react';
 
 class PracEntry extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            id: this.props.entryData.id,
+            companyNameInput: this.props.entryData.companyNameInput,
+            positionInput: this.props.entryData.positionInput,
+            mainTaskInput: this.props.entryData.mainTaskInput,
+            workedFromInput: this.props.entryData.workedFromInput,
+            workedToInput: this.props.entryData.workedToInput
+        };
+
+        this.removePracEntry = this.removePracEntry.bind(this);
+    }
+
+    removePracEntry(e) {
+        e.preventDefault();
+        // console.log('removing');
+        this.props.removeEntryFn(this.state.id);
+    }
+
     render() {
         return(
             <fieldset>
@@ -37,6 +57,7 @@ class PracEntry extends Component {
                     type="text"
                     id="workedToInput"
                     name="workedToInput"/>
+                <button onClick={this.removePracEntry}>- Remove Entry</button>
             </fieldset>
         );
     }
