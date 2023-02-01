@@ -10,7 +10,7 @@ class DataInputForm extends Component {
                 <form>
                     <GenInfoInput userData={this.props.userData} inputHandler={this.props.inputHandler}/>
                     <EduExpInput userData={this.props.userData} inputHandler={this.props.inputHandler}/>
-                    <PracExpInput/>
+                    <PracExpInput userData={this.props.userData} inputHandler={this.props.inputHandler}/>
                     <button>Submit</button>
                 </form>
             </div>
