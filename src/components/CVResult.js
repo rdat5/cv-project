@@ -6,6 +6,9 @@ class CVResult extends Component {
         const eduList = this.props.userData.userEdu.map((entry) => 
             <li key={entry.id}>{entry.schoolNameInput} - {entry.studyInput} - {entry.studyDateInput}</li>
         )
+        const pracList = this.props.userData.userPrac.map((entry) => 
+        <li key={entry.id}>{entry.companyNameInput} - {entry.positionInput} - {entry.mainTaskInput} - {entry.workedFromInput} - {entry.workedToInput}</li>
+    )
 
         return (
             <div className='cv-result'>
@@ -15,6 +18,8 @@ class CVResult extends Component {
                 <p>Phone: {userData.phoneInput}</p>
                 <p>Education:</p>
                 <ul>{eduList}</ul>
+                <p>Practical Experience:</p>
+                <ul>{pracList}</ul>
             </div>
         );
     }
