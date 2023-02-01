@@ -13,12 +13,22 @@ class PracEntry extends Component {
         };
 
         this.removePracEntry = this.removePracEntry.bind(this);
+        this.entryUpdate = this.entryUpdate.bind(this);
     }
 
     removePracEntry(e) {
         e.preventDefault();
-        // console.log('removing');
         this.props.removeEntryFn(this.state.id);
+    }
+
+    entryUpdate(e) {
+        const target = e.target;
+        const value = target.value;
+        const name = target.name;
+
+        this.setState({[name]: value}, () => {
+            this.props.pracInputFn(this.state);
+        });
     }
 
     render() {
@@ -29,34 +39,44 @@ class PracEntry extends Component {
                 <input
                     type="text"
                     id="companyNameInput"
-                    name="companyNameInput"/>
+                    name="companyNameInput"
+                    value={this.state.companyNameInput}
+                    onChange={this.entryUpdate}/>
                 <br></br>
                 <br></br>
                 <label htmlFor="positionInput">Position Title:</label>
                 <input
                     type="text"
                     id="positionInput"
-                    name="positionInput"/>
+                    name="positionInput"
+                    value={this.state.positionInput}
+                    onChange={this.entryUpdate}/>
                 <br></br>
                 <br></br>
                 <label htmlFor="mainTaskInput">Main Tasks:</label>
                 <input
                     type="text"
                     id="mainTaskInput"
-                    name="mainTaskInput"/>
+                    name="mainTaskInput"
+                    value={this.state.mainTaskInput}
+                    onChange={this.entryUpdate}/>
                 <br></br>
                 <br></br>
                 <label htmlFor="workedFromInput">Worked from:</label>
                 <input
                     type="text"
                     id="workedFromInput"
-                    name="workedFromInput"/>
+                    name="workedFromInput"
+                    value={this.state.workedFromInput}
+                    onChange={this.entryUpdate}/>
                 <br></br>
                 <label htmlFor="workedToInput">Worked to:</label>
                 <input
                     type="text"
                     id="workedToInput"
-                    name="workedToInput"/>
+                    name="workedToInput"
+                    value={this.state.workedToInput}
+                    onChange={this.entryUpdate}/>
                 <button onClick={this.removePracEntry}>- Remove Entry</button>
             </fieldset>
         );
