@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import DataInputForm from './DataInputForm';
 import CVResult from './CVResult';
-import uniqid from 'uniqid';
 
 class Main extends Component {
     constructor(props) {
