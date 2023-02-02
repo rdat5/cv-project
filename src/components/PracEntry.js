@@ -77,6 +77,7 @@ class PracEntry extends Component {
                     name="workedToInput"
                     value={this.state.workedToInput}
                     onChange={this.entryUpdate}/>
+                <br></br>
                 <button onClick={this.removePracEntry}>- Remove Entry</button>
             </fieldset>
         );

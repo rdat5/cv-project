@@ -59,6 +59,7 @@ class EduEntry extends Component {
                     name="studyDateInput"
                     value={this.state.studyDateInput}
                     onChange={this.entryUpdate}/>
+                <br></br>
                 <button onClick={this.removeEntry}>- Remove Entry</button>
             </fieldset>
         );
