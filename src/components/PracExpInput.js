@@ -12,11 +12,11 @@ class PracExpInput extends Component {
     }
 
     removePracEntry(id) {
-        const upe = this.props.userData.userPrac;
+        const { userPrac } = this.props.userData;
+
         let newPracList = [];
 
-        // Build new list
-        upe.forEach(element => {
+        userPrac.forEach(element => {
             if (element.id !== id) {
                 newPracList.push(element);
             }
@@ -42,10 +42,10 @@ class PracExpInput extends Component {
     }
     
     entryInputChange(newEntry) {
-        const upe = this.props.userData.userPrac;
+        const { userPrac } = this.props.userData;
         let newPracList = [];
 
-        upe.forEach(element => {
+        userPrac.forEach(element => {
             if (element.id === newEntry.id) {
                 newPracList.push(newEntry);
             }
@@ -58,9 +58,9 @@ class PracExpInput extends Component {
     }
 
     render() {
-        const ud = this.props.userData;
+        const { userData } = this.props;
 
-        let entryList = ud.userPrac.map(entry => <li key={entry.id}><PracEntry entryData={entry} pracInputFn={this.entryInputChange} removeEntryFn={this.removePracEntry}/></li>)
+        let entryList = userData.userPrac.map(entry => <li key={entry.id}><PracEntry entryData={entry} pracInputFn={this.entryInputChange} removeEntryFn={this.removePracEntry}/></li>)
 
         return(
             <fieldset>

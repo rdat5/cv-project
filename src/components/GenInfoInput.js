@@ -16,7 +16,8 @@ class GenInfoInput extends Component {
     }
 
     render() {
-        const ud = this.props.userData;
+        const { userData } = this.props;
+
         return(
             <fieldset>
                 <legend>General Information</legend>
@@ -25,7 +26,7 @@ class GenInfoInput extends Component {
                     type="text" 
                     id="nameInput" 
                     name="nameInput"
-                    value={ud.nameInput}
+                    value={userData.nameInput}
                     onChange={this.handleInputChange}/>
                 <br></br>
                 <br></br>
@@ -34,7 +35,7 @@ class GenInfoInput extends Component {
                     type="text" 
                     id="emailInput" 
                     name="emailInput"
-                    value={ud.emailInput}
+                    value={userData.emailInput}
                     onChange={this.handleInputChange}/>
                 <br></br>
                 <br></br>
@@ -43,7 +44,7 @@ class GenInfoInput extends Component {
                     type="text" 
                     id="phoneInput" 
                     name="phoneInput"
-                    value={ud.phoneInput}
+                    value={userData.phoneInput}
                     onChange={this.handleInputChange}/>
             </fieldset>
         );

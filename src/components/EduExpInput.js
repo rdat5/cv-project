@@ -12,11 +12,10 @@ class EduExpInput extends Component {
     }
 
     removeEduEntry(id) {
-        const ude = this.props.userData.userEdu;
+        const { userEdu } = this.props.userData;
         let newEduList = [];
 
-        // Build new list
-        ude.forEach(element => {
+        userEdu.forEach(element => {
             if (element.id !== id) {
                 newEduList.push(element);
             }
@@ -40,11 +39,11 @@ class EduExpInput extends Component {
     }
 
     entryInputChange(newEntry) {
-        const ude = this.props.userData.userEdu;
+        const { userEdu } = this.props.userData;
+        
         let newEduList = [];
-        // Build new list
 
-        ude.forEach(element => {
+        userEdu.forEach(element => {
             if (element.id === newEntry.id) {
                 newEduList.push(newEntry);
             }
@@ -57,9 +56,9 @@ class EduExpInput extends Component {
     }
 
     render() {
-        const ud = this.props.userData;
+        const { userData } = this.props;
 
-        let entryList = ud.userEdu.map(entry => <li key={entry.id}><EduEntry entryData={entry} eduInputFn={this.entryInputChange} removeEntryFn={this.removeEduEntry}/></li>)
+        let entryList = userData.userEdu.map(entry => <li key={entry.id}><EduEntry entryData={entry} eduInputFn={this.entryInputChange} removeEntryFn={this.removeEduEntry}/></li>)
 
         return(
             <fieldset>

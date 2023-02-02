@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 class CVResult extends Component {
     render() {
-        const userData = this.props.userData;
+        const { userData } = this.props;
+
         const eduList = this.props.userData.userEdu.map((entry) => 
             <li key={entry.id}>{entry.schoolNameInput} - {entry.studyInput} - {entry.studyDateInput}</li>
         )
