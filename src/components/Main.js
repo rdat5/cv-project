@@ -43,7 +43,7 @@ class Main extends Component {
 
         return (
             <main className='page-main'>
-                {currentScene};
+                {currentScene}
             </main>
         );
     }
