@@ -34,8 +34,8 @@ body {
 
 .page-main {
     background-color: #dcedc8;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    /* display: grid;
+    grid-template-columns: 1fr; */
 }
 
 .data-input-form {
