@@ -11,10 +11,12 @@ class Main extends Component {
             emailInput: '',
             phoneInput: '',
             userEdu: [],
-            userPrac: []
+            userPrac: [],
+            isEditing: true
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.toggleIsEditing = this.toggleIsEditing.bind(this);
     }
 
     handleInputChange(name, value) {
@@ -23,11 +25,25 @@ class Main extends Component {
         });
     }
 
+    toggleIsEditing(value) {
+        this.setState({
+            isEditing: value
+        });
+    }
+
     render() {
+        let currentScene;
+
+        if (this.state.isEditing) {
+            currentScene = <DataInputForm userData={this.state} inputHandler={this.handleInputChange} eduEntryFn={this.addEduEntry} toggleEditingFn={this.toggleIsEditing}/>
+        }
+        else {
+            currentScene = <CVResult userData={this.state} toggleEditingFn={this.toggleIsEditing}/>
+        }
+
         return (
             <main className='page-main'>
-                <DataInputForm userData={this.state} inputHandler={this.handleInputChange} eduEntryFn={this.addEduEntry}/>
-                <CVResult userData={this.state}/>
+                {currentScene};
             </main>
         );
     }

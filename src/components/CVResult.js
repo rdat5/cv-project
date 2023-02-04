@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
 
 class CVResult extends Component {
+    constructor(props) {
+        super(props);
+
+        this.onEditClick = this.onEditClick.bind(this);
+    }
+
+    onEditClick(e) {
+        e.preventDefault();
+
+        this.props.toggleEditingFn(true);
+    }
+
     render() {
         const { userData } = this.props;
 
@@ -43,6 +55,7 @@ class CVResult extends Component {
                 <p>{userData.phoneInput} | {userData.emailInput}</p>
                 {EducationSection}
                 {ExperienceSection}
+                <button onClick={this.onEditClick}>Edit</button>
             </div>
         );
     }
