@@ -19,12 +19,22 @@ class CVResult extends Component {
             </li>
         );
 
+        let EducationSection;
+
+        if (userData.userEdu.length > 0) {
+            EducationSection = <div>
+                <h3>Education</h3>
+                <ul>{eduList}</ul>
+            </div>
+        }
+
         return (
             <div className='cv-result'>
                 <h2>{userData.nameInput} | Curriculum Vitae</h2>
                 <p>{userData.phoneInput} | {userData.emailInput}</p>
-                <h3>Education</h3>
-                <ul>{eduList}</ul>
+                {/* <h3>Education</h3>
+                <ul>{eduList}</ul> */}
+                {EducationSection}
                 <h3>Experience</h3>
                 <ul>{pracList}</ul>
             </div>
