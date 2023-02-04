@@ -12,7 +12,7 @@ class CVResult extends Component {
         );
 
         const pracList = this.props.userData.userPrac.map((entry) => 
-            <li>
+            <li key={entry.id}>
                 <h4>{entry.companyNameInput} - {entry.positionInput}</h4>
                 <p>{entry.mainTaskInput}</p>
                 <p>{entry.workedFromInput} - {entry.workedToInput}</p>
