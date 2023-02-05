@@ -47,6 +47,10 @@ body {
     padding: 1.5rem;
 }
 
+.entry-input-list {
+    list-style: none;
+}
+
 .cv-result {
     background-color: white;
     padding: 1.5rem;

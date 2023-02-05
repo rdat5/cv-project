@@ -65,7 +65,7 @@ class PracExpInput extends Component {
         return(
             <fieldset>
                 <legend>Practical Experience</legend>
-                <ul>
+                <ul className='entry-input-list'>
                     {entryList}
                 </ul>
                 <button onClick={this.addPracEntry}>+ Add Entry</button>

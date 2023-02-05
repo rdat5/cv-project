@@ -63,7 +63,7 @@ class EduExpInput extends Component {
         return(
             <fieldset>
                 <legend>Educational Experience</legend>
-                <ul>
+                <ul className='entry-input-list'>
                     {entryList}
                 </ul>
                 <button onClick={this.addEduEntry}>+ Add Entry</button>
