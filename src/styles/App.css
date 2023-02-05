@@ -39,12 +39,22 @@ body {
 }
 
 .page-main {
-    background-color: var(--bone);
+    background-color: var(--pale);
 }
 
 .data-input-form {
-    background-color: var(--pale);
+    background-color: var(--bone);
     padding: 1.5rem;
+}
+
+fieldset {
+    border-radius: 12px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.33);
+}
+
+button {
+    border-radius: 12px;
+    padding: .5rem;
 }
 
 .entry-input-list {
