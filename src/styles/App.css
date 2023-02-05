@@ -1,3 +1,10 @@
+:root {
+    --blueish: #797596;
+    --pink: #A1869E;
+    --pale: #BBADA0;
+    --bone: #D1C6AD;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -29,23 +36,23 @@ body {
 }
 
 .page-header {
-    background-color: #ffcdd2;
+    background-color: var(--blueish);
 }
 
 .page-main {
-    background-color: #dcedc8;
+    background-color: var(--bone);
     /* display: grid;
     grid-template-columns: 1fr; */
 }
 
 .data-input-form {
-    background-color: lightgreen;
+    background-color: var(--pale);
 }
 
 .cv-result {
-    background-color: lightpink;
+    background-color: white;
 }
 
 .page-footer {
-    background-color: #ffecb3;
+    background-color: var(--pink);
 }
