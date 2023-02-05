@@ -44,10 +44,12 @@ body {
 
 .data-input-form {
     background-color: var(--pale);
+    padding: 1.5rem;
 }
 
 .cv-result {
     background-color: white;
+    padding: 1.5rem;
 }
 
 .page-footer {
