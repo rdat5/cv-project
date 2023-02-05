@@ -28,7 +28,6 @@ body {
 
 .page-wrap > * {
     padding: 1rem;
-    /* text-align: center; */
 }
 
 .page-header, .page-footer {
@@ -41,8 +40,6 @@ body {
 
 .page-main {
     background-color: var(--bone);
-    /* display: grid;
-    grid-template-columns: 1fr; */
 }
 
 .data-input-form {
