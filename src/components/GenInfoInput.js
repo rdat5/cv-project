@@ -26,24 +26,27 @@ class GenInfoInput extends Component {
                     type="text" 
                     id="nameInput" 
                     name="nameInput"
+                    placeholder="Jane Doe"
                     value={userData.nameInput}
                     onChange={this.handleInputChange}/>
                 <br></br>
                 <br></br>
                 <label htmlFor="emailInput">Email:</label>
                 <input 
-                    type="text" 
+                    type="email" 
                     id="emailInput" 
                     name="emailInput"
+                    placeholder="JaneDoe@company.com"
                     value={userData.emailInput}
                     onChange={this.handleInputChange}/>
                 <br></br>
                 <br></br>
                 <label htmlFor="phoneInput">Phone:</label>
                 <input 
-                    type="text" 
+                    type="tel" 
                     id="phoneInput" 
                     name="phoneInput"
+                    placeholder="123-456-7890"
                     value={userData.phoneInput}
                     onChange={this.handleInputChange}/>
             </fieldset>
