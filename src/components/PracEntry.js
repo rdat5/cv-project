@@ -54,8 +54,7 @@ class PracEntry extends Component {
                 <br></br>
                 <br></br>
                 <label htmlFor="mainTaskInput">Main Tasks:</label>
-                <input
-                    type="text"
+                <textarea
                     id="mainTaskInput"
                     name="mainTaskInput"
                     value={this.state.mainTaskInput}
