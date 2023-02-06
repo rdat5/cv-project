@@ -61,12 +61,12 @@ class EduExpInput extends Component {
         let entryList = userData.userEdu.map(entry => <li key={entry.id}><EduEntry entryData={entry} eduInputFn={this.entryInputChange} removeEntryFn={this.removeEduEntry}/></li>)
 
         return(
-            <fieldset>
+            <fieldset className='exp-input'>
                 <legend>Educational Experience</legend>
                 <ul className='entry-input-list'>
                     {entryList}
                 </ul>
-                <button onClick={this.addEduEntry}>+ Add Entry</button>
+                <button className='add-btn' onClick={this.addEduEntry}>+ Add Entry</button>
             </fieldset>
         );
     }

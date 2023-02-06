@@ -63,12 +63,12 @@ class PracExpInput extends Component {
         let entryList = userData.userPrac.map(entry => <li key={entry.id}><PracEntry entryData={entry} pracInputFn={this.entryInputChange} removeEntryFn={this.removePracEntry}/></li>)
 
         return(
-            <fieldset>
+            <fieldset className='prac-input'>
                 <legend>Practical Experience</legend>
                 <ul className='entry-input-list'>
                     {entryList}
                 </ul>
-                <button onClick={this.addPracEntry}>+ Add Entry</button>
+                <button className='add-btn' onClick={this.addPracEntry}>+ Add Entry</button>
             </fieldset>
         );
     }

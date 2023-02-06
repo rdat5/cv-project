@@ -14,6 +14,7 @@ body {
     padding: 5px;
     height: 100vh;
     margin: 0;
+    font-family: Helvetica, sans-serif;
 }
 
 .page-wrap {
@@ -32,6 +33,7 @@ body {
 
 .page-header, .page-footer {
     text-align: center;
+    color: white;
 }
 
 .page-header {
@@ -47,6 +49,45 @@ body {
     padding: 1.5rem;
 }
 
+.data-input-form > form {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.general-info-input {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 1.2rem;
+}
+
+.edu-exp-input {
+    display: grid;
+    grid-template-rows: 1fr min-content;
+}
+
+.exp-input > ul , .prac-input > ul{
+    display: grid;
+    gap: 1.2rem;
+}
+
+.edu-entry-input, .prac-input-entry {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    align-items: center;
+}
+
+.edu-entry-input > div {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 1.2rem;
+}
+
+.prac-entry {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 1.2rem;
+}
+
 fieldset {
     border-radius: 12px;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.33);
@@ -55,6 +96,7 @@ fieldset {
 button {
     border-radius: 12px;
     padding: .5rem;
+    height: min-content;
 }
 
 .entry-input-list {
@@ -64,6 +106,22 @@ button {
 .cv-result {
     background-color: white;
     padding: 1.5rem;
+}
+
+input, textarea {
+    height: min-content;
+    padding: .5rem;
+    border-radius: 12px;
+}
+
+.add-btn, .remove-btn {
+    background-color: var(--blueish);
+    color: white;
+}
+
+.remove-btn {
+    background-color: var(--pink);
+    color: white;
 }
 
 .page-footer {

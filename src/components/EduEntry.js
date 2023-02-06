@@ -32,35 +32,32 @@ class EduEntry extends Component {
 
     render() {
         return(
-            <fieldset>
-                <legend>Education Entry</legend>
-                <label htmlFor="schoolNameInput">School Name:</label>
-                <input
-                    type="text"
-                    id="schoolNameInput"
-                    name="schoolNameInput"
-                    value={this.state.schoolNameInput}
-                    onChange={this.entryUpdate}/>
-                <br></br>
-                <br></br>
-                <label htmlFor="studyInput">Study:</label>
-                <input
-                    type="text"
-                    id="studyInput"
-                    name="studyInput"
-                    value={this.state.studyInput}
-                    onChange={this.entryUpdate}/>
-                <br></br>
-                <br></br>
-                <label htmlFor="studyDateInput">Date of Study:</label>
-                <input
-                    type="text"
-                    id="studyDateInput"
-                    name="studyDateInput"
-                    value={this.state.studyDateInput}
-                    onChange={this.entryUpdate}/>
-                <br></br>
-                <button onClick={this.removeEntry}>- Remove Entry</button>
+            <fieldset className='edu-entry-input'>
+                    <legend>Education Entry</legend>
+                <div>
+                    <label htmlFor="schoolNameInput">School Name:</label>
+                    <input
+                        type="text"
+                        id="schoolNameInput"
+                        name="schoolNameInput"
+                        value={this.state.schoolNameInput}
+                        onChange={this.entryUpdate}/>
+                    <label htmlFor="studyInput">Study:</label>
+                    <input
+                        type="text"
+                        id="studyInput"
+                        name="studyInput"
+                        value={this.state.studyInput}
+                        onChange={this.entryUpdate}/>
+                    <label htmlFor="studyDateInput">Date of Study:</label>
+                    <input
+                        type="text"
+                        id="studyDateInput"
+                        name="studyDateInput"
+                        value={this.state.studyDateInput}
+                        onChange={this.entryUpdate}/>
+                </div>
+                <button onClick={this.removeEntry} className='remove-btn'>Remove Entry</button>
             </fieldset>
         );
     }

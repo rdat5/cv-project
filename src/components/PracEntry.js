@@ -33,51 +33,45 @@ class PracEntry extends Component {
 
     render() {
         return(
-            <fieldset>
+            <fieldset className='prac-input-entry'>
                 <legend>Practical Experience Entry</legend>
-                <label htmlFor="companyNameInput">Company Name:</label>
-                <input
-                    type="text"
-                    id="companyNameInput"
-                    name="companyNameInput"
-                    value={this.state.companyNameInput}
-                    onChange={this.entryUpdate}/>
-                <br></br>
-                <br></br>
-                <label htmlFor="positionInput">Position Title:</label>
-                <input
-                    type="text"
-                    id="positionInput"
-                    name="positionInput"
-                    value={this.state.positionInput}
-                    onChange={this.entryUpdate}/>
-                <br></br>
-                <br></br>
-                <label htmlFor="mainTaskInput">Main Tasks:</label>
-                <textarea
-                    id="mainTaskInput"
-                    name="mainTaskInput"
-                    value={this.state.mainTaskInput}
-                    onChange={this.entryUpdate}/>
-                <br></br>
-                <br></br>
-                <label htmlFor="workedFromInput">Worked from:</label>
-                <input
-                    type="text"
-                    id="workedFromInput"
-                    name="workedFromInput"
-                    value={this.state.workedFromInput}
-                    onChange={this.entryUpdate}/>
-                <br></br>
-                <label htmlFor="workedToInput">Worked to:</label>
-                <input
-                    type="text"
-                    id="workedToInput"
-                    name="workedToInput"
-                    value={this.state.workedToInput}
-                    onChange={this.entryUpdate}/>
-                <br></br>
-                <button onClick={this.removePracEntry}>- Remove Entry</button>
+                <div className='prac-entry'>
+                    <label htmlFor="companyNameInput">Company Name:</label>
+                    <input
+                        type="text"
+                        id="companyNameInput"
+                        name="companyNameInput"
+                        value={this.state.companyNameInput}
+                        onChange={this.entryUpdate}/>
+                    <label htmlFor="positionInput">Position Title:</label>
+                    <input
+                        type="text"
+                        id="positionInput"
+                        name="positionInput"
+                        value={this.state.positionInput}
+                        onChange={this.entryUpdate}/>
+                    <label htmlFor="mainTaskInput">Main Tasks:</label>
+                    <textarea
+                        id="mainTaskInput"
+                        name="mainTaskInput"
+                        value={this.state.mainTaskInput}
+                        onChange={this.entryUpdate}/>
+                    <label htmlFor="workedFromInput">Worked from:</label>
+                    <input
+                        type="text"
+                        id="workedFromInput"
+                        name="workedFromInput"
+                        value={this.state.workedFromInput}
+                        onChange={this.entryUpdate}/>
+                    <label htmlFor="workedToInput">Worked to:</label>
+                    <input
+                        type="text"
+                        id="workedToInput"
+                        name="workedToInput"
+                        value={this.state.workedToInput}
+                        onChange={this.entryUpdate}/>
+                </div>
+                <button className='remove-btn' onClick={this.removePracEntry}>- Remove Entry</button>
             </fieldset>
         );
     }
